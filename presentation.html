@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+      
+      <link rel="stylesheet" href="style.css" />
+      <title> Premiers pas en HTML </title>
+    </head>
+
+    <body>
+      <h1>  Créer une page WEB </h1>
+      
+      <h2> Introduction </h2>
+      <p>
+	Une page WEB est une suite d'instructions notées sur une page
+	de traitement de texte (le fichier source). <br/>
+	Lorsque le navigateur lit cette page, il interprète ces
+	instructions et les affiche sur l'écran. <br/>
+      </p>	  
+      <p class="exercice" >
+	<em>Exercice:</em> Télécharger le logiciel Notepad++ (si nécessaire) et voir le fichier source de cette page WEB avec ce logiciel.
+      </p>
+      
+      <h2>  Balises HTML </h2>
+      
+      <p> Chaque élément d'une page est composé d'une paire de balises HTML. Plus précisément, il faut : </p>
+      <ul>
+	<li> Une balise ouvrante de la forme &lt; balise &gt; ;</li>
+	<li> Une balise fermante de la forme &lt; /balise &gt; ;</li>
+      </ul>
+      
+      
+      <p class="exemple"> Exemple: Pour créer un paragraphe, on utilise les balises &lt; p &gt; et &lt; /p &gt;.
+      </p>
+      <p class="exercice">  Exercice: Dans le fichier source de cette page: </p>
+      <ul class="exercice">
+	<li> Identifier le début et la fin du premier paragraphe; </li>
+	<li> Identifier les balises utilisées pour créer les titres; </li>
+	<li> Identifier les balises utilisées pour créer des listes à puces.</li>
+      </ul>
+      
+      
+      
+      <p class="remarque">
+	Il existe également des balises dites "orphelines". Ces balises sont seules et elles "s'ouvrent et se referment" directement. <br/>
+	c'est le cas de la balise &lt; br/ &gt; qui permet de revenir à la ligne dans un paragraphe.
+      </p>
+      
+      <p class="remarque"> D'autres balises sont également très utiles :
+      les balises de commentaire. <br/>
+      Elles se présentent sous cette forme &lt; !-- commentaire -- &gt;.
+      On peut y insérer un commentaire dans le fichier source sans que
+      le navigateur ne l'affiche à l'écran. <br/>
+      </p>
+      <p class="exercice">  Exercice: Identifier un commentaire dans
+      le fichier source de cette page.
+      
+      <!-- VOUS POUVEZ CONSTATER QUE CE MESSAGE EST INVISIBLE SUR LA PAGE WEB.-->
+      </p>
+      
+      <h2>  Structure d'un document HTML </h2>
+      <p> Un document HTML est composé d'un en-tête dont les balises sont &lt; head &gt; et &lt; /head &gt;. <br/>
+      On y insère par exemple le titre du document et des instructions qui permettent au navigateur de déterminer l'encodage de l'écriture.
+      </p>
+      
+      <p class="exercice">  Exercice: Copier le fichier source de cette page et supprimer la ligne qui précise l'encodage UTF-8. <br/>
+      Ouvrir le fichier avec un navigateur. Observer les différences avec l'affichage précédent.
+      </p>
+      <p>
+	Remarque : avec l'encodage UTF-8, on sait représenter des langues différentes : 
+      </p>
+      <dl>
+	<dt>Anglais :</dt>
+	<dd><span lang="en">Welcome</span>,</dd>
+	<dt>Français :</dt> 
+	<dd><span lang="fr">Bienvenue</span> (jusque-là, pas de problème) ...,</dd> 
+	<dt>Turc :</dt>
+	<dd><span lang="tr">Hoşgeldiniz</span>,</dd>
+	<dt>Serbe :</dt>
+	<dd><span lang="sr">Dobrodošao</span>,</dd>
+	<dt>Russe :</dt>
+	<dd><span lang="ru">добро пожаловать</span>,</dd>
+	<dt>Chinois (simplifié) :</dt>
+	<dd><span lang="zh-cn">欢迎</span>,</dd>
+	<dt>Arabe : </dt>
+	<dd><span lang="ar" dir="rtl">السلام عليكم</span></dd>
+      </dl>
+      
+      <p> Un document HTML est également composé d'un corps dont les balises sont &lt; body &gt; et &lt; /body &gt;. <br/>
+      On y insère l'ensemble des éléments de la page (paragraphes, titres...)
+      </p>
+
+      
+      <h2>  Attributs des balises </h2>
+      <p> On peut modifier la forme d'un élément de la page en lui attribuant une couleur, une taille... <br/>
+      Pour modifier le style d'un paragraphe par exemple, on peut procéder comme suit (regardez le fichier source):
+      </p>
+      
+      <p style="color:yellow;"> Modification de la couleur  </p>
+      <p style="font-size:30px;"> Modification de la taille </p>
+      <p style="font-family:Courier New;"> Modification de la police </p>
+      <p style="text-align:center;"> Modification de l'alignement </p>
+      <p style="background-color:red;"> Modification de la couleur de fond </p>
+      
+      
+      <p> Autrement dit, on intègre directement le style dans la balise ouvrante. <br/>
+      Mais il est vivement conseillé d'utiliser la méthode suivante:
+      </p>
+      
+      <p  class="remarque" >  Cet élément est une remarque avec un style CSS </p>
+      <p> Ici, on décide d'appliquer un style identique à toutes les remarques du document. <br/>
+      Afin d'éviter de recopier à chaque fois la même chose, on crée une "classe" nommée "remarque" avec un style particulier définie dans une page de style CSS.
+      </p>
+      <p class="exercice"> Exercice: Dans le fichier "style.css", modifier les attributs des classes "remarques" et "exercices"et observer les modifications sur l'affichage. </p>
+      
+      <h2>  Vérification du code source </h2>
+      <p> Après avoir créé le fichier source d'une page WEB, il faut vérifier qu'il n'y a pas d'erreur. </br>
+      Pour cela, on utilise le W3C validator (accessible sur internet) et on teste le code source.
+      </p>
+      <p class="exercice"> Exercice: Tester le code de cette page WEB et retrouver l'erreur de cette page. </p>
+      
+    </body>  
+
+
